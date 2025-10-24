@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans text-primary;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Typographie raffinée */
+  .text-display {
+    @apply font-serif text-6xl lg:text-8xl leading-tight tracking-tight;
+  }
+
+  .text-heading {
+    @apply font-serif text-4xl lg:text-5xl leading-tight;
+  }
+
+  .text-body {
+    @apply font-sans text-base lg:text-lg leading-relaxed text-neutral-gray;
+  }
+
+  /* Boutons élégants */
+  .btn-elegant {
+    @apply px-10 py-5 transition-all duration-300 font-light tracking-wider text-sm uppercase;
+  }
+
+  .btn-primary {
+    @apply btn-elegant bg-primary text-white hover:bg-accent;
+  }
+
+  .btn-outline {
+    @apply btn-elegant border border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  /* Cards sophistiquées */
+  .card-elegant {
+    @apply bg-white border border-neutral-border transition-all duration-500;
+  }
+
+  .card-elegant:hover {
+    @apply shadow-elegant;
+  }
+
+  /* Séparateurs décoratifs */
+  .divider-elegant {
+    @apply w-16 h-px bg-accent mx-auto;
+  }
+
+  /* Textures et overlays */
+  .texture-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  /* Animations personnalisées */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Transitions fluides */
+  .transition-elegant {
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Dégradés subtils */
+  .gradient-subtle {
+    background: linear-gradient(135deg, #FAFAF8 0%, #F5F5F0 100%);
+  }
+
+  /* Text selection personnalisée */
+  ::selection {
+    @apply bg-accent/30 text-primary;
+  }
+
+  ::-moz-selection {
+    @apply bg-accent/30 text-primary;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-cream;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent/50;
+}
+
+/* Ornements SVG réutilisables */
+.ornament-diamond {
+  width: 40px;
+  height: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 2 L38 20 L20 38 L2 20 Z' stroke='%23B8956A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Focus states accessibles et élégants */
+*:focus-visible {
+  @apply outline-none ring-2 ring-accent ring-offset-2;
+}
