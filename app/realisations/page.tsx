@@ -28,7 +28,7 @@ export default function RealisationsPage() {
     { id: 'anniversaire', name: 'Anniversaires', icon: <Users className="h-5 w-5" /> }
   ]
 
-  const projects = [
+  const projects: any[] = [
     // Aucun projet pour le moment - nous venons de lancer notre activité
     // Les projets de nos clients seront ajoutés ici au fur et à mesure
   ]
