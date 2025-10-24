@@ -92,7 +92,7 @@ export default function RealisationsPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            {categories.map((category) => (
+            {categories.map((category: any) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -111,7 +111,7 @@ export default function RealisationsPage() {
           {/* Projects Grid */}
           {filteredProjects.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProjects.map((project, index) => (
+              {filteredProjects.map((project: any, index: number) => (
               <motion.div
                 key={project.id}
                 className="bg-white border border-[#E8E8E8] overflow-hidden group cursor-pointer hover:shadow-elegant transition-all duration-500"
@@ -168,7 +168,7 @@ export default function RealisationsPage() {
                   </div>
                   
                   <div className="flex flex-wrap gap-2 mb-5">
-                    {project.features.slice(0, 3).map((feature: any, featureIndex) => (
+                    {project.features.slice(0, 3).map((feature: any, featureIndex: number) => (
                       <span 
                         key={featureIndex}
                         className="text-xs text-[#4A5568] border border-[#E8E8E8] px-2 py-1 font-light"
@@ -276,7 +276,7 @@ export default function RealisationsPage() {
                   Fonctionnalités
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  {selectedProject.features.map((feature, index) => (
+                  {selectedProject.features.map((feature: any, index: number) => (
                     <span 
                       key={index}
                       className="bg-[#E8D5B7]/10 text-[#1A1F3A] px-4 py-2 text-sm font-light"
