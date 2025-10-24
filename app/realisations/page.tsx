@@ -168,7 +168,7 @@ export default function RealisationsPage() {
                   </div>
                   
                   <div className="flex flex-wrap gap-2 mb-5">
-                    {project.features.slice(0, 3).map((feature, featureIndex) => (
+                    {project.features.slice(0, 3).map((feature: any, featureIndex) => (
                       <span 
                         key={featureIndex}
                         className="text-xs text-[#4A5568] border border-[#E8E8E8] px-2 py-1 font-light"
